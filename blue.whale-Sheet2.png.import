@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://rkownn5xic0i"
-path="res://.godot/imported/spritesheet.png-76e0b916bc20d45ac6900db6e21d8a9e.ctex"
+uid="uid://b2637arjh71i5"
+path="res://.godot/imported/blue.whale-Sheet2.png-ca0eb9fedc77b563d038dbb62659a95f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/spritesheet.png"
-dest_files=["res://.godot/imported/spritesheet.png-76e0b916bc20d45ac6900db6e21d8a9e.ctex"]
+source_file="res://blue.whale-Sheet2.png"
+dest_files=["res://.godot/imported/blue.whale-Sheet2.png-ca0eb9fedc77b563d038dbb62659a95f.ctex"]
 
 [params]
 

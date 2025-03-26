@@ -1,0 +1,88 @@
+[gd_scene load_steps=13 format=3 uid="uid://brbsb5sy52h1i"]
+
+[ext_resource type="Script" path="res://script/player.gd" id="1_js0w4"]
+[ext_resource type="Texture2D" uid="uid://p285c5cddyq6" path="res://assets/blue.whale-Sheet2.png" id="2_27jve"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wo8g4"]
+atlas = ExtResource("2_27jve")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p0bhc"]
+atlas = ExtResource("2_27jve")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mhw3a"]
+atlas = ExtResource("2_27jve")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eoch1"]
+atlas = ExtResource("2_27jve")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n8jd4"]
+atlas = ExtResource("2_27jve")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_skwdf"]
+atlas = ExtResource("2_27jve")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8um5s"]
+atlas = ExtResource("2_27jve")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_epgr0"]
+atlas = ExtResource("2_27jve")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b2mkk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wo8g4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p0bhc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mhw3a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eoch1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n8jd4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_skwdf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8um5s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_epgr0")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2mivs"]
+radius = 7.99997
+height = 42.0051
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_js0w4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(3, -13)
+sprite_frames = SubResource("SpriteFrames_b2mkk")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.102574
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-5, -13)
+rotation = 1.57341
+shape = SubResource("CapsuleShape2D_2mivs")
